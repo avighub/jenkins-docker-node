@@ -12,8 +12,9 @@
 - container jenkins_home: ```/var/jenkins_home```
 
 ### Running existing container from existing volume
-```docker run --name jenkins -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home local-jenkins-image```
-
+- Assuming the container with name ```jenkins``` still exist and not removed
+- Assuming volume name ```jenkins_home``` still exists and not removed
+```docker start jenkins```
 
 ### References:
 - https://github.com/jenkins-docs/quickstart-tutorials
